@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface BezoekerDao extends JpaRepository<Bezoeker, Long> {
-    public List<Bezoeker> findBezoekerByPatientAfdeling_Code(String code);
-    public Bezoeker findBezoekerByPatient_Code(String code);
-    public List<Bezoeker> findBezoekerByTijdstipAndPatient_Afdeling(LocalTime tijdstip, Afdeling afdeling);
+    List<Bezoeker> findBezoekerByPatient_Afdeling_Code(String afdelingsCode);
+    Bezoeker findBezoekerByPatient_Code(String patientCode);
+    List<Bezoeker> findBezoekerByTijdstipAndPatient_Afdeling(LocalTime tijdstip, Afdeling afdeling);
 }

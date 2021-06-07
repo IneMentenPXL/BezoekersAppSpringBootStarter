@@ -31,8 +31,8 @@ public final class PatientBuilder {
 
     public Patient build() {
         Patient patient = new Patient();
-        patient.setAfdeling(afdeling);
         patient.setCode(code);
+        patient.setAfdeling(afdeling);
         patient.setOpname(opname);
         return patient;
     }

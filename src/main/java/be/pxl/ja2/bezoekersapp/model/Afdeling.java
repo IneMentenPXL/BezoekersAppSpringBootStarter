@@ -1,17 +1,16 @@
 package be.pxl.ja2.bezoekersapp.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Afdeling {
 	@Id
-	@GeneratedValue
 	private String code;
 	private String naam;
 
 	public Afdeling() {
+		// JPA only
 	}
 
 	public Afdeling(String code, String naam) {
@@ -33,5 +32,24 @@ public class Afdeling {
 
 	public void setNaam(String naam) {
 		this.naam = naam;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+
+		Afdeling afdeling = (Afdeling) o;
+
+		return code != null ? code.equals(afdeling.code) : afdeling.code == null;
+	}
+
+	@Override
+	public int hashCode() {
+		return code != null ? code.hashCode() : 0;
 	}
 }

@@ -22,7 +22,7 @@ public class BezoekerstijdstipUtil {
 	}
 
 
-	public static void controleerAanmeldingstijdstip(LocalDateTime aanmeldingstijdstip, LocalTime geregistreerdTijdstip) throws OngeldigTijdstipException {
+	public static void controleerAanmeldingstijdstip(LocalDateTime aanmeldingstijdstip, LocalTime geregistreerdTijdstip) {
 		LocalDateTime geldigAanmeldingstijdstip = LocalDateTime.of(aanmeldingstijdstip.toLocalDate(), geregistreerdTijdstip);
 		LocalDateTime kwartierVoor = geldigAanmeldingstijdstip.minusMinutes(15);
 		LocalDateTime kwartierNa = geldigAanmeldingstijdstip.plusMinutes(15);

@@ -8,7 +8,7 @@ import java.time.LocalTime;
 @Entity
 public class Bezoeker {
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String naam;
 	private String voornaam;

@@ -1,12 +1,14 @@
 package be.pxl.ja2.bezoekersapp.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 
 @Entity
 public class Patient {
 	@Id
-	@GeneratedValue
 	private String code;
 	private LocalDateTime opname;
 	@ManyToOne

@@ -54,7 +54,7 @@ public class BezoekersService {
         return visitor.getId();
     }
 
-    public void controleerBezoek(Long bezoekerId, LocalDateTime aanmelding) throws BezoekersAppException, OngeldigTijdstipException {
+    public void controleerBezoek(Long bezoekerId, LocalDateTime aanmelding) {
         Bezoeker bezoeker = bezoekerDao.findById(bezoekerId).orElse(null);
         if (bezoeker == null) {
             LOGGER.error("Geen bezoeker gevonden met id " + bezoekerId);
@@ -73,6 +73,6 @@ public class BezoekersService {
     }
 
     public List<Bezoeker> getBezoekersVoorAfdeling(String afdelingCode) {
-        return bezoekerDao.findBezoekerByPatientAfdeling_Code(afdelingCode);
+        return bezoekerDao.findBezoekerByPatient_Afdeling_Code(afdelingCode);
     }
 }
