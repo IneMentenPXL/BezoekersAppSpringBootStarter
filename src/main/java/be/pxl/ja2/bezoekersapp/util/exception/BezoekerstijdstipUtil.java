@@ -1,6 +1,4 @@
-package be.pxl.ja2.bezoekersapp.util;
-
-import be.pxl.ja2.bezoekersapp.util.exception.OngeldigTijdstipException;
+package be.pxl.ja2.bezoekersapp.util.exception;
 
 import java.time.LocalDateTime;
 import java.time.LocalTime;

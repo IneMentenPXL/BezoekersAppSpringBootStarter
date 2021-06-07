@@ -1,10 +1,15 @@
 package be.pxl.ja2.bezoekersapp.model;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 
+@Entity
 public class Patient {
+	@Id
+	@GeneratedValue
 	private String code;
 	private LocalDateTime opname;
+	@ManyToOne
 	private Afdeling afdeling;
 
 	public String getCode() {

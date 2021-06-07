@@ -1,12 +1,19 @@
 package be.pxl.ja2.bezoekersapp.rest.resources;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.LocalTime;
 
 public class RegistreerBezoekerResource {
+	@NotEmpty
 	private String patientCode;
+	@NotNull
 	private LocalTime tijdstip;
+	@NotEmpty
 	private String naam;
+	@NotEmpty
 	private String voornaam;
+	@NotEmpty
 	private String telefoonnummer;
 
 	public String getPatientCode() {
